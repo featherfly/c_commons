@@ -5,6 +5,10 @@
 extern "C" {
 #endif
 
+#ifndef __cplusplus
+#define nullptr NULL
+#endif
+
 #ifndef bool
 typedef unsigned int bool;
 
