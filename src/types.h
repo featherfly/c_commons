@@ -50,8 +50,8 @@ typedef int int32_t;
 typedef unsigned int uint32_t;
 #endif
 
-#ifndef
-#endif
+// #ifndef
+// #endif
 
 
 #ifdef __cplusplus
