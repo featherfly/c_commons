@@ -11,6 +11,7 @@ extern "C" {
 
 #ifndef bool
 typedef unsigned int bool;
+#endif
 
 #ifndef true
 #define true 1
@@ -50,12 +51,7 @@ typedef int int32_t;
 typedef unsigned int uint32_t;
 #endif
 
-// #ifndef
-// #endif
-
 
 #ifdef __cplusplus
 }
-#endif
-
 #endif
