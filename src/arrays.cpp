@@ -1,12 +1,12 @@
 
 #include "arrays.h"
 
-int array_copy(const char source[], char target[], unsigned int size)
+int array_copy_char(const char source[], char target[], uint32_t size)
 {
-  return array_copy((byte*) source, (byte*) target, size);
+  return array_copy_byte((uint8_t *) source, (uint8_t *) target, size);
 }
 
-int array_copy(const byte source[], byte target[], unsigned int size)
+int array_copy_byte(const uint8_t source[], uint8_t target[], uint32_t size)
 {  
   int index;
   for(index = 0; index < size; index++) 
@@ -16,7 +16,7 @@ int array_copy(const byte source[], byte target[], unsigned int size)
   return index;
 }
 
-int array_copy(const byte source[], byte target[], unsigned int start, unsigned int size)
+int array_copy_byte2(const uint8_t source[], uint8_t target[], uint32_t start, uint32_t size)
 {
   int index;
   for(index = start; index < size + start; index++) 
@@ -26,7 +26,7 @@ int array_copy(const byte source[], byte target[], unsigned int start, unsigned 
   return index;
 }
 
-bool array_equals(const byte source[], const char target[], unsigned int size)
+bool array_equals_byte_char(const uint8_t source[], const char target[], uint32_t size)
 {
   bool eq = true;
   for (int i = 0; i < size; i++)
@@ -37,7 +37,7 @@ bool array_equals(const byte source[], const char target[], unsigned int size)
   }
   return true;
 }
-bool array_equals(const char source[], const char target[], unsigned int size)
+bool array_equals(const char source[], const char target[], uint32_t size)
 {
   bool eq = true;
   for (int i = 0; i < size; i++)
@@ -49,7 +49,7 @@ bool array_equals(const char source[], const char target[], unsigned int size)
   return true;
 }
 
-int array_set(char target[], const char source[], unsigned int start, unsigned int len)
+int array_set(char target[], const char source[], uint32_t start, uint32_t len)
 {
   int index;
   for(index = 0; index < len; index++) 

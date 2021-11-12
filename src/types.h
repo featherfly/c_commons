@@ -4,12 +4,12 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#ifndef byte
-typedef unsigned char byte;
-#endif
-
 #ifdef __cplusplus
 extern "C" {
+#endif
+
+#ifndef byte
+typedef unsigned char byte;
 #endif
 
 #ifndef __cplusplus
