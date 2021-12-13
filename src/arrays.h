@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-bool array_equals_uint8_t_char(const uint8_t source[], const char target[], uint32_t len);
+bool array_equals_uint8_char(const uint8_t source[], const char target[], uint32_t len);
 
 bool array_equals(const char source[], const char target[], uint32_t len);
 
@@ -16,7 +16,7 @@ bool array_equals(const char source[], const char target[], uint32_t len);
  * @param target 复制目标
  * @param size 复制数量
  */
-int array_copy_uint8_t(const uint8_t source[], uint8_t target[], uint32_t size);
+int array_copy_uint8(const uint8_t source[], uint8_t target[], uint32_t size);
 
 int array_copy_char(const char source[], char target[], uint32_t size);
 
@@ -26,7 +26,7 @@ int array_copy_char(const char source[], char target[], uint32_t size);
  * @param start 复制源开始索引（包含）
  * @param size 复制数量
  */
-int array_copy_uint8_t2(const uint8_t source[], uint8_t target[], uint32_t start, uint32_t size);
+int array_copy_range_uint8(const uint8_t source[], uint8_t target[], uint32_t start, uint32_t size);
 
 /**
  * @param target 设置目标
