@@ -1,0 +1,30 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "create build dir",
+            "type": "shell",
+            "command": "if exist ${workspaceFolder}\\.build (echo \"\") else (mkdir ${workspaceFolder}\\.build)"
+        },
+        {
+            "label": "compile current file",
+            "type": "shell",
+            "command": "gcc -S ${file} -o ${workspaceFolder}\\.build\\${fileBasenameNoExtension}.s",
+            "dependsOn": "create build dir"
+        },
+        {
+            "label": "compile and assemble current file",
+            "type": "shell",
+            "command": "gcc -c ${file} -o ${workspaceFolder}\\.build\\${fileBasenameNoExtension}.o",
+            "dependsOn": "create build dir"
+        },
+        {
+            "label": "expand macro current file",
+            "type": "shell",
+            "command": "gcc -E -P ${file} > ${workspaceFolder}\\.build\\${fileBasenameNoExtension}.e.${fileExtname}",
+            "dependsOn": "create build dir"
+        }
+    ]
+}
