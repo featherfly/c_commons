@@ -1,5 +1,5 @@
-#ifndef ARRAYS_H
-#define ARRAYS_H
+#ifndef __FF__ARRAYS_H
+#define __FF__ARRAYS_H
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -16,7 +16,7 @@ extern "C" {
         }                                                                                                   \
     }                                                                                                       \
     return true;                                                                                            \
-}                                                 
+}
 
 bool array_equals_uint8_char(const uint8_t source[], const char target[],
                              uint32_t len);

@@ -1,5 +1,5 @@
-#ifndef _OS_ENV_H
-#define _OS_ENV_H
+#ifndef __FF__OS_ENV_H
+#define __FF__OS_ENV_H
 
 #ifdef __cplusplus
 extern "C" {

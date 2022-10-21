@@ -1,5 +1,5 @@
-#ifndef DEBUGS_H
-#define DEBUGS_H
+#ifndef __FF__DEBUGS_H
+#define __FF__DEBUGS_H
 
 #ifdef ENABLE_DEBUG
 #define D(_code) _code

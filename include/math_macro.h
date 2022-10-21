@@ -1,5 +1,5 @@
-#ifndef MATCH_MAC_H
-#define MATCH_MAC_H
+#ifndef __FF__MATCH_MAC_H
+#define __FF__MATCH_MAC_H
 
 #include <stdint.h>
 

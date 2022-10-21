@@ -1,5 +1,5 @@
-#ifndef _STRINGS_H
-#define _STRINGS_H
+#ifndef __FF__ARGS_H
+#define __FF__ARGS_H
 
 #ifdef __cplusplus
 extern "C" {

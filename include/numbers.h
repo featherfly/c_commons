@@ -1,5 +1,5 @@
-#ifndef NUMBERS_H
-#define NUMBERS_H
+#ifndef __FF__NUMBERS_H
+#define __FF__NUMBERS_H
 
 #include <stdint.h>
 #include <math.h>
