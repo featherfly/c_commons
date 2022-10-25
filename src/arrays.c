@@ -55,3 +55,12 @@ int array_set(char target[], const char source[], uint32_t start,
     }
     return index;
 }
+
+
+uint32_t array_copy_uint8_at(uint8_t dest[], uint32_t dest_start_index, const uint8_t src[], uint32_t size) {
+    uint32_t index;
+    for (index = 0; index < size; index++) {
+        dest[dest_start_index + index] = src[index];
+    }
+    return index;
+}

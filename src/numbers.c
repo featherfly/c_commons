@@ -67,6 +67,24 @@ void int8_to_bytes(int8_t i, uint8_t abyte[]) {
     abyte[0] = (uint8_t)(0xff & i);
 }
 
+uint32_t bytes_to_u32(uint8_t *bytes) {  
+    uint32_t value = 0;
+    for (uint8_t i = 0; i < 4; i++) {
+        uint32_t shift = (4 - 1 - i) * 8;
+        value += (bytes[i] & 0x000000FF) << shift;
+    }
+    return value;
+}
+
+uint16_t bytes_to_u16(uint8_t *bytes) {  
+    uint16_t value = 0;
+    for (uint8_t i = 0; i < 2; i++) {
+        uint16_t shift = (2 - 1 - i) * 8;
+        value += (bytes[i] & 0x00FF) << shift;
+    }
+    return value;  
+}
+
 void to_hex(uint8_t c, char* hex) {
     if (c < 16) {
         sprintf(hex, "0%c", _hex_chars[c]);

@@ -64,6 +64,22 @@ void int16_to_bytes(int16_t value, uint8_t bytes[]);
  */
 void int8_to_bytes(int8_t value, uint8_t bytes[]);
 
+/**
+ * @brief uint8_t array to uint32_t
+ * 
+ * @param bytes the uint8_t array, length 4
+ * @return uint32_t value
+ */
+uint32_t bytes_to_u32(uint8_t *bytes);
+
+/**
+ * @brief uint8_t array to uint16_t
+ * 
+ * @param bytes the uint8_t array, length 2
+ * @return uint16_t value
+ */
+uint16_t bytes_to_u16(uint8_t *bytes);
+
 void to_hex(uint8_t c, char* hex);
 
 
