@@ -13,23 +13,23 @@ if is_mode("debug") then
     add_defines("ENABLE_DEBUG")
 end
 
--- target("compile")
---     set_kind("phony")
---     add_includedirs("include")
---     add_files("src/*.c")
+target("compile")
+    set_kind("phony")
+    add_includedirs("include")
+    add_files("src/*.c")
 
--- target("test")
---     set_kind("binary")
---     add_files("test/*.c")
---     add_deps("compile")
+target("test")
+    set_kind("binary")
+    add_files("test/*.c")
+    add_deps("compile")
 
 target("c_commons")
-
     -- make as a static/shared library
     set_kind("$(kind)")
 
     add_includedirs("include")
     add_files("src/*.c")
+
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
