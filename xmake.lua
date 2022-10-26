@@ -25,7 +25,8 @@ target("test")
 
 target("c_commons")
     -- make as a static/shared library
-    set_kind("$(kind)")
+    -- set_kind("$(kind)")
+    set_kind("static")
 
     add_includedirs("include")
     add_files("src/*.c")

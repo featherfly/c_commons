@@ -1,0 +1,26 @@
+[
+{
+  "directory": "y:\\workspace\\vscode_workspace\\featherfly_libs_projects\\c_commons",
+  "arguments": ["Y:\\soft\\programe\\runtime\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-fvisibility=hidden", "-O3", "-std=c99", "-Iinclude", "-DNDEBUG", "-o", "build\\.objs\\c_commons\\mingw\\x86_64\\release\\src\\arrays.c.obj", "src\\arrays.c"],
+  "file": "src\\arrays.c"
+},
+{
+  "directory": "y:\\workspace\\vscode_workspace\\featherfly_libs_projects\\c_commons",
+  "arguments": ["Y:\\soft\\programe\\runtime\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-fvisibility=hidden", "-O3", "-std=c99", "-Iinclude", "-DNDEBUG", "-o", "build\\.objs\\c_commons\\mingw\\x86_64\\release\\src\\bits.c.obj", "src\\bits.c"],
+  "file": "src\\bits.c"
+},
+{
+  "directory": "y:\\workspace\\vscode_workspace\\featherfly_libs_projects\\c_commons",
+  "arguments": ["Y:\\soft\\programe\\runtime\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-fvisibility=hidden", "-O3", "-std=c99", "-Iinclude", "-DNDEBUG", "-o", "build\\.objs\\c_commons\\mingw\\x86_64\\release\\src\\numbers.c.obj", "src\\numbers.c"],
+  "file": "src\\numbers.c"
+},
+{
+  "directory": "y:\\workspace\\vscode_workspace\\featherfly_libs_projects\\c_commons",
+  "arguments": ["Y:\\soft\\programe\\runtime\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-fvisibility=hidden", "-O3", "-std=c99", "-Iinclude", "-DNDEBUG", "-o", "build\\.objs\\c_commons\\mingw\\x86_64\\release\\src\\strings.c.obj", "src\\strings.c"],
+  "file": "src\\strings.c"
+},
+{
+  "directory": "y:\\workspace\\vscode_workspace\\featherfly_libs_projects\\c_commons",
+  "arguments": ["Y:\\soft\\programe\\runtime\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-fvisibility=hidden", "-O3", "-std=c99", "-DNDEBUG", "-o", "build\\.objs\\test\\mingw\\x86_64\\release\\test\\main.c.obj", "test\\main.c"],
+  "file": "test\\main.c"
+}]
