@@ -12,21 +12,23 @@ add_rules("mode.debug", "mode.release")
 if is_mode("debug") then 
     add_defines("ENABLE_DEBUG")
 end
+   
 
-target("compile")
-    set_kind("phony")
+target("assemble")
+    set_kind("object")
     add_includedirs("include")
     add_files("src/*.c")
 
 target("test")
     set_kind("binary")
+    add_includedirs("include")
+    add_files("src/*.c")
     add_files("test/*.c")
-    add_deps("compile")
 
 target("c_commons")
     -- make as a static/shared library
-    -- set_kind("$(kind)")
-    set_kind("static")
+    set_kind("$(kind)")
+    -- set_kind("static")
 
     add_includedirs("include")
     add_files("src/*.c")
