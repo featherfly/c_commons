@@ -9,16 +9,16 @@
 
 // #define ENABLE_LOG_TAG 0
 
-// #define LOG_LEVEL_ERROR 0
-// #define LOG_LEVEL_WARNING 0
-//  #define LOG_LEVEL_INFO 0
-// #define LOG_LEVEL_TRACE 0
+// #define ENABLE_LOG_ERROR 0
+// #define ENABLE_LOG_WARNING 0
+// #define ENABLE_LOG_INFO 0
+// #define ENABLE_LOG_TRACE 0
 
 #ifdef ENABLE_DEBUG
 
 #define _LOG_TAG ""
 
-#if defined(LOG_LEVEL_ERROR)
+#if defined(ENABLE_LOG_ERROR)
 
 // #warning "def error log"
 #ifdef ENABLE_LOG_TAG
@@ -45,7 +45,7 @@
 #endif
 #define T(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
 
-#elif defined(LOG_LEVEL_WARNING)
+#elif defined(ENABLE_LOG_WARNING)
 // #warning "def warning log"
 #ifdef ENABLE_LOG_TAG
 #undef LOG_TAG
@@ -65,7 +65,7 @@
 #endif
 #define T(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
 
-#elif defined(LOG_LEVEL_INFO)
+#elif defined(ENABLE_LOG_INFO)
 // #warning "def info log"
 #ifdef ENABLE_LOG_TAG
 #undef LOG_TAG
@@ -79,7 +79,7 @@
 #endif
 #define T(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
 
-#elif defined(LOG_LEVEL_TRACE)
+#elif defined(ENABLE_LOG_TRACE)
 // #warning "def trace log"
 #ifdef ENABLE_LOG_TAG
 #undef LOG_TAG
