@@ -8,6 +8,8 @@ extern "C" {
 #ifdef WIN32
 #include <windows.h>
 
+#define IS_WIN(_code) _code
+
 #define SET_CONSOLE_OUTPUT_UTF8() SetConsoleOutputCP(65001);
 #define CONSOLE_OUTPUT_UTF8 SetConsoleOutputCP(65001);
 
@@ -17,6 +19,7 @@ extern "C" {
 
 #else
 
+#define IS_WIN(_code)
 // 或许来处理
 #define SET_CONSOLE_OUTPUT_UTF8() ;
 #define CONSOLE_OUTPUT_UTF8 ;

@@ -8,11 +8,11 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 
-#define BIT_GET(mask, index) !((mask & (1UL << index)) == 0);
+#define BIT_GET(mask, index) !((mask & (1UL << index)) == 0)
 
-#define BIT_SET_TRUE(mask, index) *mask |= (1UL << index);
+#define BIT_SET_TRUE(mask, index) *mask |= (1UL << index)
 
-#define BIT_SET_FLASE(mask, index) *mask &= ~(1UL << index);
+#define BIT_SET_FLASE(mask, index) *mask &= ~(1UL << index)
 
 #define BIT_SET(mask, index, state) if (state) {*mask |= (1UL << index);} else {*mask &= ~(1UL << index);}
 
@@ -33,7 +33,7 @@ bool bit_get(uint8_t mask, uint8_t index);
  * @param index bit index
  * @param state bit state
  */
-void bit_set(uint8_t* mask, int index, bool state);
+void bit_set(uint8_t* mask, uint8_t index, bool state);
 
 /**
  * @brief set bit for mask at index with state
@@ -43,7 +43,7 @@ void bit_set(uint8_t* mask, int index, bool state);
  * @param state bit state
  * @return the set bit changed bit mask
  */
-uint8_t bit_set_new(uint8_t mask, int index, bool state);
+uint8_t bit_set_new(uint8_t mask, uint8_t index, bool state);
 
 
 
