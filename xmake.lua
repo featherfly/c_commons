@@ -1,7 +1,7 @@
 set_project("c_commons")
 
 -- set xmake minimum version
-set_xmakever("2.6.1")
+set_xmakever("2.7.7")
 
 -- set language: c99
 stdc = "c99"
@@ -15,7 +15,7 @@ end
    
 
 target("assemble")
-    set_kind("object")
+    -- set_kind("object")
     add_includedirs("include")
     add_files("src/*.c")
 
@@ -24,6 +24,12 @@ target("test")
     add_includedirs("include")
     add_files("src/*.c")
     add_files("test/*.c")
+
+target("test-strings")
+    set_kind("binary")
+    add_includedirs("include")
+    add_files("src/*.c")
+    add_files("test/strings/*.c")
 
 target("c_commons")
     -- make as a static/shared library
