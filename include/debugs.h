@@ -18,74 +18,72 @@
 
 #define _LOG_TAG ""
 
-#if defined(ENABLE_LOG_ERROR)
+#if defined(LOG_LEVEL_ERROR)
+//#warning "def error log"
+#ifdef ENABLE_LOG_TAG 
+#undef LOG_TAG
+#define LOG_TAG "E:"
+#endif
+#define E(format,...) printf(LOG_TAG format,##__VA_ARGS__)
 
-// #warning "def error log"
-#ifdef ENABLE_LOG_TAG
+#elif defined(LOG_LEVEL_WARNING)
+//#warning "def error log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "E:"
+#define LOG_TAG "E:"
 #endif
-#define E(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
-// #warning "def warning log"
-#ifdef ENABLE_LOG_TAG
+#define E(format,...) printf(LOG_TAG format,##__VA_ARGS__)
+//#warning "def warning log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "W:"
+#define LOG_TAG "W:"
 #endif
-#define W(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
-// #warning "def info log"
-#ifdef ENABLE_LOG_TAG
-#undef LOG_TAG
-#define _LOG_TAG "I:"
-#endif
-#define I(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
-// #warning "def trace log"
-#ifdef ENABLE_LOG_TAG
-#undef LOG_TAG
-#define _LOG_TAG "T:"
-#endif
-#define T(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
 
-#elif defined(ENABLE_LOG_WARNING)
-// #warning "def warning log"
-#ifdef ENABLE_LOG_TAG
+#elif defined(LOG_LEVEL_INFO)
+//#warning "def error log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "W:"
+#define LOG_TAG "E:"
 #endif
-#define W(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
-// #warning "def info log"
-#ifdef ENABLE_LOG_TAG
+#define E(format,...) printf(LOG_TAG format,##__VA_ARGS__)
+//#warning "def warning log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "I:"
+#define LOG_TAG "W:"
 #endif
-#define I(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
-// #warning "def trace log"
-#ifdef ENABLE_LOG_TAG
+#define W(format,...) printf(LOG_TAG format,##__VA_ARGS__)
+//#warning "def info log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "T:"
+#define LOG_TAG "I:"
 #endif
-#define T(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
+#define I(format,...) printf(LOG_TAG format,##__VA_ARGS__)
 
-#elif defined(ENABLE_LOG_INFO)
-// #warning "def info log"
-#ifdef ENABLE_LOG_TAG
+#elif defined(LOG_LEVEL_TRACE)
+//#warning "def error log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "I:"
+#define LOG_TAG "E:"
 #endif
-#define I(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
-// #warning "def trace log"
-#ifdef ENABLE_LOG_TAG
+#define E(format,...) printf(LOG_TAG format,##__VA_ARGS__)
+//#warning "def warning log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "T:"
+#define LOG_TAG "W:"
 #endif
-#define T(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
-
-#elif defined(ENABLE_LOG_TRACE)
-// #warning "def trace log"
-#ifdef ENABLE_LOG_TAG
+#define W(format,...) printf(LOG_TAG format,##__VA_ARGS__)
+//#warning "def info log"
+#ifdef ENABLE_LOG_TAG 
 #undef LOG_TAG
-#define _LOG_TAG "T:"
+#define LOG_TAG "I:"
 #endif
-#define T(format, ...) printf(_LOG_TAG format, ##__VA_ARGS__)
+#define I(format,...) printf(LOG_TAG format,##__VA_ARGS__)
+//#warning "def trace log"
+#ifdef ENABLE_LOG_TAG 
+#undef LOG_TAG
+#define LOG_TAG "T:"
+#endif
+#define T(format,...) printf(LOG_TAG format,##__VA_ARGS__)
 
 #endif
 
