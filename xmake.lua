@@ -31,11 +31,15 @@ target("test-strings")
     add_files("src/*.c")
     add_files("test/strings/*.c")
 
+target("test-number")
+    set_kind("binary")
+    add_includedirs("include")
+    add_files("test/test_number.c")
+
 target("c_commons")
     -- make as a static/shared library
     set_kind("$(kind)")
     -- set_kind("static")
-
     add_includedirs("include")
     add_files("src/*.c")
 

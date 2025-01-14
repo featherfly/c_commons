@@ -2,6 +2,7 @@
 #define __FF__NUMBERS_H
 
 #include <stdint.h>
+#include <stdbool.h>
 #include <math.h>
 
 #ifdef __cplusplus
@@ -79,6 +80,15 @@ uint32_t bytes_to_u32(uint8_t *bytes);
  * @return uint16_t value
  */
 uint16_t bytes_to_u16(uint8_t *bytes);
+
+/**
+ * @brief binary array to uint32_t
+ * 
+ * @param binary binnary array
+ * @param size binary array size
+ * @return uint32_t value
+ */
+uint32_t binary_to_decimal(bool binary[], size_t size);
 
 void to_hex(uint8_t c, char* hex);
 

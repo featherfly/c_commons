@@ -85,6 +85,17 @@ uint16_t bytes_to_u16(uint8_t *bytes) {
     return value;  
 }
 
+uint32_t binary_to_decimal(bool binary[], size_t size) {
+    uint32_t decimal = 0;
+    int i = 0, j = 0;
+    for (i = size - 1; i >= 0; i--) {
+        uint8_t bit = binary[i] ? '1' : '0';
+        decimal += (bit - '0') * (1 << j);
+        j++;
+    }
+    return decimal;
+}
+
 void to_hex(uint8_t c, char* hex) {
     if (c < 16) {
         sprintf(hex, "0%c", _hex_chars[c]);
